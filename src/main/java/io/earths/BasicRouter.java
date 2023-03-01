@@ -27,7 +27,7 @@ public class BasicRouter {
     @Bind
     SponsorRepo sponsorRepo;
 
-    @Design("layouts/default.jsp")
+    @Design("layouts/earth.jsp")
     @Get("/")
     public String index(ViewCache cache){
         List<User> sponsors = sponsorRepo.all();

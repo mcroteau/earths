@@ -108,6 +108,8 @@
     }
 </style>
 
+<div id="discover" style="height:200px;"></div>
+
 <div class="container index">
 
     <div id="view-wrapper">
@@ -135,5 +137,20 @@
     ${sponsor.ref},
 </a:foreach>
 
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCQulbBR1VkrQsKwisM1mLEyEMRUoT2GCI&callback=create_map&libraries=&v=weekly" async></script>
+<script>
+    function create_map() {
+
+        let start = {
+            lat: 42.7432082,
+            lng: -89.5296815
+        };
+
+        const map = new google.maps.Map(document.getElementById("discover"), {
+            zoom: 3,
+            center: start
+        });
+    }
+</script>
 </body>
 </html>

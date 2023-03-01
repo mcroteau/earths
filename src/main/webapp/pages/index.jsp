@@ -14,7 +14,6 @@
     .count-details{font-size:27px; font-weight: 300; font-family: Roboto !important}
 </style>
 
-
 <div class="casa">
 
     <div class="glideleft" style="width:500px;">
@@ -53,48 +52,5 @@
             </p>
         </div>
     </div>
-    <div class="signup-index glideright">
-
-        <h2>Signup!</h2>
-        <p style="font-size:22px">Are you a person in need? Do you need a place to live? Food to eat? Money to help you get started in life? Register! Let us help you out!</p>
-
-        <form method="post" class="saint-frm">
-
-            <input type="hidden" name="onidx" value="true"/>
-            <input type="hidden" name="userType" value="saint"/>
-
-            {{#message}}
-            <p class="notify">{{message}}</p>
-            {{/message}}
-
-            <label>Name</label>
-            <input type="text" name="name" style="width:60%;" placeholder="First & Last"/>
-
-            <label>Email</label>
-            <input type="text" name="email" style="width:80%;" placeholder="support@earths.io"/>
-
-            <label>Password</label>
-            <input type="password" name="passwd" style="width:60%;" placeholder="&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;"/>
-
-            <label>Fantastic Reference Codes</label>
-            <p class="information">If you are being referred to this site by someone,
-                or more than one Fantastic person, please enter their reference codes below
-                comma seperated.</p>
-            <textarea name="refs" style="width:60%;" placeholder="abc-xyz"></textarea>
-
-            <br class="clear"/>
-
-            <input type="submit" value="Register Now!" class="btn green signup-signin saint-btn"/>
-
-            <style>
-                .pcg{display:none}
-                .pcgi{position:relative;clear:both;}
-            </style>
-
-            <p class="pcg">
-                Registering... please wait!
-            </p>
-
-        </form>
-    </div>
 </div>
+

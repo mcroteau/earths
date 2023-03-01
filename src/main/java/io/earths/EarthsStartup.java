@@ -36,7 +36,7 @@ public class EarthsStartup implements ServerListener {
 
         PersistenceConfig persistenceConfig = new PersistenceConfig();
         persistenceConfig.setDriver(Drivers.H2);
-        persistenceConfig.setUrl("jdbc:h2:~/EarthsDb");
+        persistenceConfig.setUrl("jdbc:h2:~/Earths");
         persistenceConfig.setUser("sa");
         persistenceConfig.setPassword("");
 

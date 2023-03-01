@@ -47,6 +47,7 @@ public class IdentityRouter {
     @Bind
     NationRepo nationRepo;
 
+    @Design("layouts/default.jsp")
     @Get("/signup")
     public String signup(ViewCache cache){
         List<Nation> nations = nationRepo.all();

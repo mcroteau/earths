@@ -55,8 +55,6 @@ public class SaintRouter {
             return "redirect:/";
         }
 
-//        List<Need> needs = earthsHelp.getNeeds(saint.getNeeds());
-//        cache.set("needs", needs);
         cache.set("saint", saint);
         cache.set("title", saint.getName());
         return "pages/saints/index.jsp";
@@ -89,10 +87,11 @@ public class SaintRouter {
         return "redirect:/#saints/" + guid;
     }
 
-    @JsonOutput
+    @Design("layouts/default.jsp")
     @Get("/saints/{guid}")
     public String data(NetworkRequest req,
                        ViewCache cache,
+                       FlashMessage message,
                        SecurityManager manager,
                        @Component String guid){
 
@@ -104,11 +103,8 @@ public class SaintRouter {
 
         User saint = saintRepo.guid(guid.toLowerCase());
         if(saint == null) {
-            saint = new User();
-            Response response = new Response(false,"unable to locate user.");
-            response.setRedirect("index");
-            saint.setResponse(response);
-            return gson.toJson(saint);
+            message.set("unable to locate user.");
+            return "redirect:/";
         }
 
         List<User> sponsors = new ArrayList<>();
@@ -136,7 +132,7 @@ public class SaintRouter {
 
         cache.set("saint", saint);
         cache.set("sponsors", sponsors);
-        return gson.toJson(cache);
+        return "pages/saint/index.jsp";
     }
 
     @JsonOutput
@@ -192,7 +188,7 @@ public class SaintRouter {
         return "pages/saints/locate.jsp";
     }
 
-//    @Design("/layouts/sec.jsp")
+    @Design("/layouts/sec.jsp")
     @Get("/saints/edit/{id}")
     @Before(value = {EditUserBefore.class}, variables="{id}")
     public String edit(NetworkRequest req,

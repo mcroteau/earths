@@ -5,7 +5,7 @@
 
 <p>Are you a person in need? Do you need a place to live? A good meal?
     Money to help you get started in life? Register! Let us try help!
-    <a href="/#signup">Sign Up!</a>.
+    <a href="/signup">Sign Up!</a>.
 </p>
 
 <div class="signup-frm">
@@ -17,7 +17,7 @@
         <label>Password</label>
         <input type="password" name="passwd" style="width:60%;" value="${passwd}" placeholder="&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;"/>
 
-        <br class="clear"/>
+        <div style="margin:10px;"></div>
 
         <input type="submit" value="Signin" class="btn green signup-signin"/>
     </form>

@@ -71,6 +71,7 @@
                 <a href="/sponsors">Become a<br/> Sponsor!</a>
             </div>
             <div class="nav-href-wrapper">
+                <img src="/assets/media/mrkr.png"/>
                 <a href="/locate">Locate a<br/>Person in Need</a>
             </div>
         </div>

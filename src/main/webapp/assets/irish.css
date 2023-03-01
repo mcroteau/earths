@@ -133,21 +133,21 @@ input[type="number"]:hover{
     font-weight:400 !important;
     font-family: Roboto !important;
     padding: 4px 17px !important;
-    background-color: #fff;
-    border:solid 1px #fff;
+    background-color: #fafbe7;
+    border:solid 1px #fafbe7;
     border-radius: 9px !important;
 }
 
 input:-webkit-autofill {
     color:#071f32;
-    background-color: #fff;
-    border:solid 1px #fff;
+    background-color: #fafbe7;
+    border:solid 1px #fafbe7;
 }
 
 input[type="text"]:focus,
 input[type="password"]:focus{
-    background-color: #fff;
-    border:solid 1px #fff;
+    background-color: #fafbe7;
+    border:solid 1px #fafbe7;
 }
 
 
@@ -156,19 +156,18 @@ input[type="email"]::placeholder,
 input[type="password"]::placeholder,
 input[type="number"]::placeholder{
     font-size:27px !important;
-    font-weight:400 !important;
-    color: #9dafc2;
-    color: #fff;
+    font-weight:300 !important;
+    color: #3e3e3e;
     font-family: Roboto !important;
 }
 
 textarea,
 textarea::placeholder{
     font-size:27px !important;
-    font-weight:400 !important;
-    color: #9dafc2;
-    background:#fff;
-    border:solid 1px #fff;
+    font-weight:300 !important;
+    color: #3e3e3e;
+    background-color: #fafbe7;
+    border:solid 1px #fafbe7;
     font-family: Roboto !important;
 }
 
@@ -270,11 +269,11 @@ body{
     background: rgb(194,204,213);
     background: radial-gradient(circle, #5a6e84 0%, #323f4e 100%);
     background: rgb(255,240,217);
-    background: linear-gradient(180deg, #c8d8dc 0%, rgb(242, 250, 255) 100%);
+    background: linear-gradient(90deg, #c8d8dc 0%, rgb(242, 250, 255) 100%);
     /*background: rgb(255,240,217);*/
     /*background: linear-gradient(180deg, rgba(255,240,217,1) 30%, rgba(255,255,255,1) 100%);*/
     background-attachment: fixed;
-    /*background: #fff;*/
+    background: #fff;
 }
 
 .earth{

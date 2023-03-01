@@ -1,16 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&family=Permanent+Marker&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Hi+Melody&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Hi+Melody&family=Walter+Turncoat&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300;400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Domine:wght@400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
 
 /* Teko SoldiersAmbition */
 html, body, input,
@@ -19,7 +7,7 @@ h1, h2, h3, h4, a,
 input, select, textarea,
 input::placeholder,
 textarea::placeholder, th, td{
-    font-family: "Open Sans" !important;
+    font-family: Roboto !important;
     font-weight: 300;
     color: #071f32;
     line-height:1.3em;
@@ -29,21 +17,20 @@ textarea::placeholder, th, td{
 h1,h2,h3,h4{font-weight: 900; font-family: Roboto !important}
 mark{}
 a{color:#fff;font-family:Roboto !important;}
-a:active{transform: translateY(1px)}
 .dspntmnt{margin-right:24px;font-weight:900 !important;font-style:italic;font-family:Roboto !important}
-.count{font-weight:900 !important;font-family:"Open Sans" !important}
+.count{font-weight:900 !important;font-family: Roboto !important}
 
 p{margin:3px 0px 10px;}
 
 input[type="text"]::-webkit-input-placeholder,
 input[type="email"]::-webkit-input-placeholder,
 input[type="password"]::-webkit-input-placeholder { /* Edge */
-    color: #0E2E47;
+    color: #9dafc2;
     font-family: "Nanum Pen Script" !important;
 }
 
 input[type="text"]:-ms-input-placeholder { /* Internet Explorer 10-11 */
-    color: #0E2E47;
+    color: #9dafc2;
     font-family: "Nanum Pen Script" !important;
 }
 
@@ -52,11 +39,9 @@ input[type="email"]::placeholder,
 input[type="number"]::placeholder,
 input[type="password"]::placeholder {
     font-weight: 300;
-    color: #0E2E47;
+    color: #9dafc2;
     font-family: "Nanum Pen Script" !important;
 }
-
-.btn:active{transform: scale(0.99)}
 
 .btn,
 input[type="button"].btn,
@@ -66,9 +51,9 @@ input[type="submit"].btn{
     border:solid 1px #0979c4;
     /*background: #0098ff;*/
     /*border:solid 1px #1aa3ff;*/
-    font-size:16px !important;
-    font-weight:400 !important;
-    font-family: "Roboto Condensed" !important;
+    font-size:15px !important;
+    font-weight:300 !important;
+    font-family: Roboto !important;
     transition-duration: 0.1s;
     -webkit-transition-duration: 0.1s;
 }
@@ -146,7 +131,7 @@ input[type="number"]:hover{
     color: #071f32;
     font-size:27px !important;
     font-weight:400 !important;
-    font-family: "Open Sans" !important;
+    font-family: Roboto !important;
     padding: 4px 17px !important;
     background-color: #fff;
     border:solid 1px #fff;
@@ -172,19 +157,19 @@ input[type="password"]::placeholder,
 input[type="number"]::placeholder{
     font-size:27px !important;
     font-weight:400 !important;
-    color: #0E2E47;
+    color: #9dafc2;
     color: #fff;
-    font-family: "Open Sans" !important;
+    font-family: Roboto !important;
 }
 
 textarea,
 textarea::placeholder{
     font-size:27px !important;
     font-weight:400 !important;
-    color: #071f32;
+    color: #9dafc2;
     background:#fff;
     border:solid 1px #fff;
-    font-family: "Open Sans" !important;
+    font-family: Roboto !important;
 }
 
 
@@ -198,7 +183,7 @@ select:-webkit-autofill,
 select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
     font-weight:400 !important;
-    font-family:  "Open Sans" !important;
+    font-family: Roboto !important;
     border:solid 1px #fff !important;
     -webkit-text-fill-color: #071f32;
     -webkit-box-shadow: 0 0 0px 1000px #fff inset;
@@ -211,7 +196,7 @@ select{
     color:#071f32;
     background: #fcfee6;
     border:solid 1px #fcfee6;
-    font-family:  Dosis !important;
+    font-family: Roboto !important;
 }
 
 .notify{
@@ -239,7 +224,7 @@ h1{
     vertical-align: middle;
     font-size:16px !important;
     font-weight: 400 !important;
-    font-family: "Roboto Condensed" !important;
+    font-family: Roboto !important;
     padding:13px 16px;
     box-shadow: none !important;
     background: #61768D;
@@ -285,10 +270,11 @@ body{
     background: rgb(194,204,213);
     background: radial-gradient(circle, #5a6e84 0%, #323f4e 100%);
     background: rgb(255,240,217);
-    background: linear-gradient(180deg, #acddff 0%, rgb(242, 250, 255) 100%);
+    background: linear-gradient(180deg, #c8d8dc 0%, rgb(242, 250, 255) 100%);
     /*background: rgb(255,240,217);*/
     /*background: linear-gradient(180deg, rgba(255,240,217,1) 30%, rgba(255,255,255,1) 100%);*/
     background-attachment: fixed;
+    /*background: #fff;*/
 }
 
 .earth{
@@ -323,7 +309,7 @@ body{
 
 p, span, .href-dotted{font-size:23px;}
 label{font-size:16px;font-weight: 400}
-.logo-header{color:#071f32;font-size:29px;font-family: Kanit !important;font-style:italic !important;font-weight:900;line-height:1.0em;}
+.logo-header{color:#071f32;font-size:29px;font-family: Roboto !important;font-style:italic !important;font-weight:900;line-height:1.0em;}
 .logo-header span{line-height:1.0em;font-size:19px;}
 .nav-href-wrapper a{color:#071f32;font-size:16px;}
 .nav-href-wrapper .btn{}

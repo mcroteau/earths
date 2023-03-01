@@ -35,6 +35,12 @@ public class BasicRouter {
         return "pages/index.jsp";
     }
 
+    @Design("layouts/default.jsp")
+    @Get("/intel")
+    public String intel(){
+        return "pages/intel.jsp";
+    }
+
     @Get("/policy")
     public String policy(){
         return "pages/policy.jsp";

@@ -68,7 +68,7 @@
         </p>
 
 
-        <input type="submit" value="Become a Fantastic" class="btn green signup-signin fstc-btn"/>
+        <input type="submit" value="Register Now!" class="btn green signup-signin fstc-btn"/>
     </form>
 </div>
 

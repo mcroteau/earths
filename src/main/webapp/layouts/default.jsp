@@ -11,14 +11,7 @@
     <link rel="stylesheet" href="/assets/grid.css">
     <link rel="stylesheet" href="/assets/default.css">
     <link rel="stylesheet" href="/assets/irish.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ractive/1.4.0/ractive.min.js" integrity="sha512-PZFuxjUwWqMaq5255WJAk2qsa+4uEGdwWgn9qa10j+RBsRF0XqDRMs7nTB6HH9GPTeWXi+YV+z/a2jtnnXpZjA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="/assets/reaction/jquery.js"></script>
-    <script src="/assets/reaction/confetti.js"></script>
-    <script src="/assets/reaction/signals.js"></script>
-    <script src="/assets/reaction/hasher.js"></script>
-    <script src="/assets/reaction/crossroads.js"></script>
-    <%--    <script src="/assets/reaction/bshh.js"></script>--%>
-
 </head>
 <body>
 <%--todo: move all css to irish.css--%>

@@ -60,19 +60,18 @@ public class IdentityRouter {
         return "pages/signup.jsp";
     }
 
+    @Design("layouts/default.jsp")
     @Get("/signin")
     public String signin(){
         return "pages/signin.jsp";
     }
 
-    @Design("/layouts/guest.jsp")
+    @Design("/layouts/default.jsp")
     @Get("/saints/signin")
     public String signinune(){
         return "pages/signin.jsp";
     }
 
-    //todo:remove the prefix from uri and test
-    @Design("/layouts/guest.jsp")
     @Post("/signin")
     public String signin(NetworkRequest req, NetworkResponse resp, SecurityManager manager, FlashMessage flashMessage, ViewCache cache){
 

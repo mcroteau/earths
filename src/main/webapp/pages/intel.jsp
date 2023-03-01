@@ -9,5 +9,5 @@ can register on the site, give a little information and start accepting donation
 <p>After you register and finish the onboarding process, you will be able to receive donations directly on this site. We even go as
     far as working with a company to help you set up a bank account if you do not already have one.</p>
 
-<h1>Second part of the idea</h1>
+<h3>Second part of the idea</h3>
 <p>Sponsors! You can become a sponsor dona...</p>

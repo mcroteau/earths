@@ -21,7 +21,7 @@
         <p class="hln">
             There are problems in this World,
             <mark>Earths Extraordinary is dedicated to assisting efforts to abolish homelessness, deliver clean water and alleviate hunger.</mark>
-            <a href="#intel" class="href-dotted index-href">Learn More.</a></p>
+            <a href="/intel" class="href-dotted index-href">Learn More.</a></p>
 
         <br class="clear"/><br class="clear"/>
 

@@ -34,7 +34,7 @@ public class SponsorRouter {
     @Design("layouts/default.jsp")
     @Get("/sponsors")
     public String sponsor(){
-        return "pages/sponsor/index.jsp";
+        return "pages/sponsor/signup.jsp";
     }
 
     @Design("layouts/default.jsp")

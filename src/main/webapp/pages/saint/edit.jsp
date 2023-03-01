@@ -1,6 +1,6 @@
-<stargzr:if spec="${message != ''}">
+<a:if spec="${message != ''}">
     <p class="notify">${message}</p>
-</stargzr:if>
+</a:if>
 
 <h1>Profile Settings</h1>
 

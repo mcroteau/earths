@@ -1,0 +1,3 @@
+<script>
+    startConfetti();
+</script>

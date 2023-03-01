@@ -27,7 +27,6 @@
 
 <div class="glideleft register-frm">
 
-
     <h2>Signup Now!</h2>
 
     <a:if spec="${message != ''}">

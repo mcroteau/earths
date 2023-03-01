@@ -5,6 +5,7 @@ import io.earths.model.User;
 import io.earths.repo.SponsorRepo;
 import io.earths.repo.SaintRepo;
 import net.plsar.annotations.Bind;
+import net.plsar.annotations.Design;
 import net.plsar.annotations.JsonOutput;
 import net.plsar.annotations.NetworkRouter;
 import net.plsar.annotations.network.Get;
@@ -26,13 +27,11 @@ public class BasicRouter {
     @Bind
     SponsorRepo sponsorRepo;
 
+    @Design("layouts/default.jsp")
     @Get("/")
     public String index(ViewCache cache){
-        System.out.println("index");
-
         List<User> sponsors = sponsorRepo.all();
         cache.set("sponsors", sponsors);
-
         return "pages/index.jsp";
     }
 

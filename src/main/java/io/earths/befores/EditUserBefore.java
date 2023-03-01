@@ -13,7 +13,7 @@ public class EditUserBefore implements RouteEndpointBefore {
 
         BeforeResult result = new BeforeResult();
         if(!manager.isAuthenticated(req)){
-            result.setMessage("user is nil fail.");
+            flashMessage.set("user is nil fail.");
             result.setRedirectUri("redirect:/signin");
             return result;
         }
@@ -21,7 +21,7 @@ public class EditUserBefore implements RouteEndpointBefore {
         String permission = "users::maintenance::" + id;
 
         if(!manager.hasPermission(permission, req)){
-            flashMessage.setMessage("permission fail.");
+            flashMessage.set("permission fail.");
             result.setRedirectUri("redirect:/signin");
         }
 

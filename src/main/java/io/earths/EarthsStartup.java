@@ -95,7 +95,7 @@ public class EarthsStartup implements ServerListener {
             superUser.setGuid(earthsHelp.getString(21).toLowerCase());
             superUser.setName("Super!");
             superUser.setPhone("9073477052");
-            superUser.setEmail("mike@plsar.net");
+            superUser.setEmail("mike@ae0n.net");
             superUser.setPasswd(securityManager.hash("effort"));
             superUser.setUserType("super");
             superUser.setTimeCreated(earthsHelp.getTime());
@@ -248,7 +248,7 @@ public class EarthsStartup implements ServerListener {
             User user = new User();//steve weatherby
             user.setUid(earthsHelp.getString(21).toLowerCase());
             user.setGuid(earthsHelp.getString(21).toLowerCase());
-            user.setEmail(group + idx + "@plsar.net");
+            user.setEmail(group + idx + "@ae0n.net");
             user.setUserType(group);
             user.setPasswd(securityManager.hash("effort"));
             user.setTimeCreated(earthsHelp.getTime());
@@ -261,6 +261,7 @@ public class EarthsStartup implements ServerListener {
             savedUser.setStateId(1L);
             savedUser.setTownId(2L);
 
+            System.out.println("z:" + savedUser.getUserType());
             String refsvalue = "";
             for(String refvalue : refs){
                 refsvalue += refvalue + ",";

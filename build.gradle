@@ -32,8 +32,7 @@ task monitor(type: JavaExec) {
 
 
 dependencies {
-    implementation project(':stargzr-monitor')
-    implementation project(':stargzr')
+    implementation 'net.plsar:plsar:1.80.0'
     implementation 'mysql:mysql-connector-java:8.0.27'
     implementation 'com.google.maps:google-maps-services:2.0.0'
     implementation 'com.stripe:stripe-java:22.0.0'

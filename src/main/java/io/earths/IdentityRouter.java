@@ -77,7 +77,7 @@ public class IdentityRouter {
 
         if(manager.isAuthenticated(req)){
             manager.signout(req, resp);
-            flashMessage.setMessage("success signed out.");
+            flashMessage.set("success signed out.");
             return "redirect:/signin";
         }
 
@@ -171,7 +171,7 @@ public class IdentityRouter {
 
     @JsonOutput
     @Post("/register")
-    public String register(NetworkRequest req, SecurityManager manager, ViewCache cache){
+    public String register(NetworkRequest req, SecurityManager manager, FlashMessage message, ViewCache cache){
         User user = req.get(User.class);
         user.setEmail(earthsHelp.getSpaces(user.getEmail()));
 
@@ -179,9 +179,11 @@ public class IdentityRouter {
         if(storedUser != null){
 
             if(user.getUserType().equals(storedUser.getUserType())){
-                Response response = new Response(false, "you are already in our system! alrght!");
-                user.setResponse(response);
-                return gson.toJson(user);
+                message.set("you are already in our system! alrght!");
+                if(user.getUserType().equals("sponsor")){
+                    return "redirect:/sponsor";
+                }
+                return "redirect:/signup";
             }
 
             if(!user.getUserType().equals(storedUser.getUserType())){
@@ -191,29 +193,34 @@ public class IdentityRouter {
                     storedUser.setFantastic(true);
                 }
                 userRepo.update(storedUser);
-                Response response = new Response(false, "you are now both someone in need and a sponsor!");
-                user.setResponse(response);
-                return gson.toJson(user);
+                message.set("you are now both someone in need and a sponsor!");
+                return "redirect:/saint/mix";
             }
 
         }
 
         if(user.getName() == null || user.getName().equals("")){
-            Response response = new Response(false, "forgive us, we need a name.");
-            user.setResponse(response);
-            return gson.toJson(user);
+            message.set("forgive us, we need a name.");
+            if(user.getUserType().equals("sponsor")){
+                return "redirect:/sponsor";
+            }
+            return "redirect:/signup";
         }
 
         if(user.getEmail() == null || user.getEmail().equals("")){
-            Response response = new Response(false, "please enter a valid email.");
-            user.setResponse(response);
-            return gson.toJson(user);
+            message.set("please enter a valid email.");
+            if(user.getUserType().equals("sponsor")){
+                return "redirect:/sponsor";
+            }
+            return "redirect:/signup";
         }
 
         if(user.getPasswd() == null || user.getPasswd().equals("")){
-            Response response = new Response(false, "please enter a password.");
-            user.setResponse(response);
-            return gson.toJson(user);
+            message.set("please enter a password.");
+            if(user.getUserType().equals("sponsor")){
+                return "redirect:/sponsor";
+            }
+            return "redirect:/signup";
         }
 
         String passwd = manager.hash(user.getPasswd());
@@ -266,13 +273,11 @@ public class IdentityRouter {
         }
 
         if(user.getUserType().equals("sponsor")){
-            Response response = new Response(true, "successfully registered.");
-            savedUser.setResponse(response);
-            return gson.toJson(savedUser);
+            message.set("successfully registered.");
+            return "redirect:/sponsor/registered";
         }
 
-        Response response = new Response(true, "successfully registered.");
-        savedUser.setResponse(response);
-        return gson.toJson(savedUser);
+        message.set("successfully registered.");
+        return "redirect:/saint/registered";
     }
 }

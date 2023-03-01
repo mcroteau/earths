@@ -49,7 +49,6 @@ public class User {
     String refs;
     boolean sponsor;
 
-    Response response;
     List<User> sponsors;
 
     public Long getId() {
@@ -338,14 +337,6 @@ public class User {
 
     public void setFantastic(boolean sponsor) {
         this.sponsor = sponsor;
-    }
-
-    public Response getResponse() {
-        return response;
-    }
-
-    public void setResponse(Response response) {
-        this.response = response;
     }
 
     public List<User> getFantastics() {

@@ -5,6 +5,7 @@ import io.earths.model.*;
 import io.earths.repo.*;
 import net.plsar.annotations.*;
 import net.plsar.annotations.network.Get;
+import net.plsar.model.FlashMessage;
 import net.plsar.model.ViewCache;
 
 import java.util.ArrayList;
@@ -30,18 +31,22 @@ public class SponsorRouter {
     @Bind
     SponsorRepo sponsorRepo;
 
-    @JsonOutput
+    @Design("layouts/default.jsp")
+    @Get("/sponsors")
+    public String sponsor(){
+        return "pages/sponsor/index.jsp";
+    }
+
+    @Design("layouts/default.jsp")
     @Get("/sponsors/{guid}")
     public String data(ViewCache cache,
+                       FlashMessage message,
                        @Component String guid){
 
         User sponsor = sponsorRepo.guid(guid.toLowerCase());
         if(sponsor == null) {
-            sponsor = new User();
-            Response response = new Response(false,"unable to locate user.");
-            response.setRedirect("index");
-            sponsor.setResponse(response);
-            return gson.toJson(sponsor);
+            message.set("unable to locate user.");
+            return "redirect:/";
         }
 
         Town town = townRepo.get(sponsor.getTownId());
@@ -69,6 +74,6 @@ public class SponsorRouter {
 
         cache.set("sponsor", sponsor);
         cache.set("sponsors", sponsors);
-        return gson.toJson(cache);
+        return "pages/sponsor/index.jsp";
     }
 }

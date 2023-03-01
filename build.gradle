@@ -1,0 +1,44 @@
+plugins {
+    id 'application'
+}
+
+group 'io.earths'
+version '1.0.0'
+
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+    mavenCentral()
+}
+
+application{
+    mainClass.set('io.earths.Earths')
+}
+
+task stargzr(type: JavaExec) {
+    main = "io.earths.Earths"
+    classpath = sourceSets.main.runtimeClasspath
+    applicationName = 'Earths'
+    systemProperties([ "port" : 9876 ])
+}
+
+task monitor(type: JavaExec) {
+    main = "net.plsar.StargzrMonitor"
+    classpath = sourceSets.main.runtimeClasspath
+    applicationName = 'StargzrMonitor'
+    systemProperties([ "port" : 9876 ])
+}
+
+
+dependencies {
+    implementation project(':stargzr-monitor')
+    implementation project(':stargzr')
+    implementation 'mysql:mysql-connector-java:8.0.27'
+    implementation 'com.google.maps:google-maps-services:2.0.0'
+    implementation 'com.stripe:stripe-java:22.0.0'
+    implementation 'com.google.code.gson:gson:2.8.6'
+    implementation 'com.amazonaws:aws-java-sdk-s3:1.11.912'
+    implementation 'org.ocpsoft.prettytime:prettytime:4.0.1.Final'
+    implementation 'commons-validator:commons-validator:1.5.1'
+}

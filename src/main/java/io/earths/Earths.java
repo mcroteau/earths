@@ -9,7 +9,7 @@ import net.plsar.security.renderer.GuestRenderer;
 
 public class Earths {
     public static void main(String[] args){
-        PLSAR plsar = new PLSAR(9876);
+        PLSAR plsar = new PLSAR(1701);
         plsar.setNumberOfPartitions(300);
         plsar.setNumberOfRequestExecutors(700);
 

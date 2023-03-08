@@ -50,7 +50,7 @@
 
     <div id="header">
         <div id="logo-wrapper">
-            <a href="/" class="logo-header">Earths+
+            <a href="/" class="logo-header">Earths
                 <br/>
                 <span class="spirit">Extraordinary</span>
             </a>
@@ -67,7 +67,8 @@
             <div class="nav-href-wrapper">
                 <a href="/gift" class="btn" style="margin-top:-7px;">Make a Donation</a>
             </div>
-            <div class="nav-href-wrapper">
+            <div class="nav-href-wrapper spnsor">
+                <img src="/assets/media/rmrkble.png"/>
                 <a href="/sponsors">Become a<br/> Sponsor!</a>
             </div>
             <div class="nav-href-wrapper">

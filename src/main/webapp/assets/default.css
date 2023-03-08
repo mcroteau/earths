@@ -293,7 +293,7 @@ strong{
 .information,
 .instructions{
     font-size:14px;
-    font-family:"Poppins" !important;
+    font-family:Roboto !important;
     font-weight: 300;
 }
 
@@ -478,7 +478,6 @@ input[type="checkbox"]{
 .nav-href-wrapper span{float:left;display:inline-block;font-weight:300;font-size:19px;}
 .nav-href-wrapper a{font-size:14px; color:#222d40; float:right; font-weight: 300;}
 .nav-href-wrapper img{width:29px;margin-right:12px;}
-
 
 #tagline{font-size:11px;font-style:italic;display:block;}
 .logo-header{color:#474e5c;font-size:27px;font-family:"Poppins" !important;font-style:italic;font-weight: 700 !important;margin:0px 0px 0px;display:inline-block;text-decoration: none;border:none !important;}

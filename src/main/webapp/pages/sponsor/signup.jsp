@@ -21,11 +21,13 @@
     <p>Once registered on the Earth's Extraordinary, a Sponsor can go out, meet
     new people that are in need, give them their account id and refer them to the
     site. If the person in need registers, accepts donations, the individual who
-        made the donation can optionally gift the Remarkable who is helping the
+        made the donation can optionally gift the remarkable Sponsor who is helping the
         person in need.</p>
 </div>
 
 <div class="glideleft register-frm">
+
+    <img src="/assets/media/rmrkble.png"/>
 
     <h2>Signup Now!</h2>
 

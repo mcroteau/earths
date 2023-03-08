@@ -22,31 +22,10 @@ a{color:#fff;font-family:Roboto !important;}
 
 p{margin:3px 0px 10px;}
 
-input[type="text"]::-webkit-input-placeholder,
-input[type="email"]::-webkit-input-placeholder,
-input[type="password"]::-webkit-input-placeholder { /* Edge */
-    color: #9dafc2;
-    font-family: "Nanum Pen Script" !important;
-}
-
-input[type="text"]:-ms-input-placeholder { /* Internet Explorer 10-11 */
-    color: #9dafc2;
-    font-family: "Nanum Pen Script" !important;
-}
-
-input[type="text"]::placeholder,
-input[type="email"]::placeholder,
-input[type="number"]::placeholder,
-input[type="password"]::placeholder {
-    font-weight: 300;
-    color: #9dafc2;
-    font-family: "Nanum Pen Script" !important;
-}
-
 .btn,
 input[type="button"].btn,
 input[type="reset"].btn,
-input[type="submit"].btn{
+input[type="submit"].btn {
     background: #0979c4;
     border:solid 1px #0979c4;
     /*background: #0098ff;*/
@@ -133,21 +112,27 @@ input[type="number"]:hover{
     font-weight:400 !important;
     font-family: Roboto !important;
     padding: 4px 17px !important;
-    background-color: #fafbe7;
-    border:solid 1px #fafbe7;
+    background-color: #d7e1e7;
+    border:solid 1px #d7e1e7;
+    background-color: #fff;
+    border:solid 1px #fff;
     border-radius: 9px !important;
 }
 
 input:-webkit-autofill {
     color:#071f32;
-    background-color: #fafbe7;
-    border:solid 1px #fafbe7;
+    background-color: #d7e1e7;
+    border:solid 1px #d7e1e7;
+    background-color: #fff;
+    border:solid 1px #fff;
 }
 
 input[type="text"]:focus,
 input[type="password"]:focus{
-    background-color: #fafbe7;
-    border:solid 1px #fafbe7;
+    background-color: #d7e1e7;
+    border:solid 1px #d7e1e7;
+    background-color: #fff;
+    border:solid 1px #fff;
 }
 
 
@@ -166,8 +151,10 @@ textarea::placeholder{
     font-size:27px !important;
     font-weight:300 !important;
     color: #3e3e3e;
-    background-color: #fafbe7;
-    border:solid 1px #fafbe7;
+    background-color: #d7e1e7;
+    border:solid 1px #d7e1e7;
+    background-color: #fff;
+    border:solid 1px #fff;
     font-family: Roboto !important;
 }
 
@@ -193,8 +180,10 @@ select{
     font-size:27px !important;
     font-weight:400 !important;
     color:#071f32;
-    background: #fcfee6;
-    border:solid 1px #fcfee6;
+    background: #d7e1e7;
+    border:solid 1px #d7e1e7;
+    background-color: #fff;
+    border:solid 1px #fff;
     font-family: Roboto !important;
 }
 
@@ -269,11 +258,10 @@ body{
     background: rgb(194,204,213);
     background: radial-gradient(circle, #5a6e84 0%, #323f4e 100%);
     background: rgb(255,240,217);
-    background: linear-gradient(90deg, #c8d8dc 0%, rgb(242, 250, 255) 100%);
+    background: linear-gradient(90deg, #f2fafa 0%, rgb(242, 250, 255) 100%);
     /*background: rgb(255,240,217);*/
     /*background: linear-gradient(180deg, rgba(255,240,217,1) 30%, rgba(255,255,255,1) 100%);*/
     background-attachment: fixed;
-    background: #fff;
 }
 
 .earth{
@@ -308,7 +296,7 @@ body{
 
 p, span, .href-dotted{font-size:23px;}
 label{font-size:16px;font-weight: 400}
-.logo-header{color:#071f32;font-size:29px;font-family: Roboto !important;font-style:italic !important;font-weight:900;line-height:1.0em;}
+.logo-header{color:#071f32;font-size:29px;font-family: Roboto !important;font-style:normal !important;font-weight:900;line-height:1.0em;}
 .logo-header span{line-height:1.0em;font-size:19px;}
 .nav-href-wrapper a{color:#071f32;font-size:16px;}
 .nav-href-wrapper .btn{}

@@ -1,6 +1,6 @@
 
 <h1>Locate Person in Need!</h1>
-<p style="margin:0px 0px 10px;">Search Earth's Remarkable's database for people in need,
+<p style="margin:0px 0px 10px;">Search Earth's Extraordinary's database for people in need,
     contact, donate or become a sponsor!</p>
 
 <style>
@@ -17,15 +17,13 @@
         border-radius: 50px !important;
     }
     #query::placeholder{
-        color: #ceb6a0;
-        font-size:14px !important;
+        color: #a0b5ce;
+        font-size:24px !important;
     }
     #query-btn{
         right:0px;
         font-size: 16px !important;
         padding: 23px 22px;
-        background:#427EE3;
-        border:solid 1px #427EE3;
         border-top-left-radius: 0px;
         border-bottom-left-radius: 0px;
         box-shadow: 0 3px 5px rgba(0,0,0,0.1);
@@ -62,20 +60,20 @@
 
 <div id="query-results-wrapper">
     <table>
-        {{#each saints as saint}}
+        <a:foreach items="${saints}" var="saint">
             <tr>
                 <td>
-                    {{#saint.image}}
-                        <a href="/{{saint.guid}}" style=""><img src="{{saint.image}}"/></a>
-                    {{/saint.image}}
+                    <a:if spec="${saint.image != ''}">
+                        <a href="/${saint.guid}" style=""><img src="${saint.image}"/></a>
+                    </a:if>
                 </td>
                 <td>
-                    <a href="/{{saint.guid}}" class="href-dotted">{{saint.name}}<br/>
-                        <span>{{saint.town}}, {{saint.nationCode}}</span></a>
+                    <a href="/${saint.guid}" class="href-dotted">${saint.name}<br/>
+                        <span>${saint.town}, ${saint.nationCode}</span></a>
                 </td>
-                <td><a href="/{{saint.guid}}" class="btn">Donate $</a></td>
+                <td><a href="/${saint.guid}" class="btn">Donate $</a></td>
             </tr>
-        {{/each}}
+        </a:foreach>
     </table>
 </div>
 
@@ -98,3 +96,19 @@
 <br class="clear"/>
 
 <div class="bottom"></div>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCQulbBR1VkrQsKwisM1mLEyEMRUoT2GCI&callback=create_map&libraries=&v=weekly" async></script>
+<script>
+    function create_map() {
+
+        let start = {
+            lat: 42.7432082,
+            lng: -89.5296815
+        };
+
+        const map = new google.maps.Map(document.getElementById("discover"), {
+            zoom: 3,
+            center: start
+        });
+    }
+</script>

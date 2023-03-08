@@ -3,12 +3,16 @@ package io.earths;
 import com.google.gson.Gson;
 import io.earths.model.State;
 import io.earths.model.Town;
+import io.earths.model.User;
+import io.earths.repo.SaintRepo;
 import io.earths.repo.StateRepo;
 import io.earths.repo.TownRepo;
 import net.plsar.annotations.*;
 import net.plsar.annotations.network.Get;
 import net.plsar.model.NetworkRequest;
+import net.plsar.model.ViewCache;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @NetworkRouter
@@ -23,11 +27,24 @@ public class LocateRouter {
     TownRepo townRepo;
 
     @Bind
+    SaintRepo saintRepo;
+
+    @Bind
     StateRepo stateRepo;
 
     @Design("layouts/default.jsp")
     @Get("/locate")
-    public String locate(){ return "pages/saint/locate.jsp"; }
+    public String locate(ViewCache cache){
+        List<User> allSaints = saintRepo.all();
+        List<User> saints = new ArrayList<>();
+        for(User saint: allSaints){
+            Town town = townRepo.get(saint.getTownId());
+            saint.setTown(town.getName());
+            saints.add(saint);
+        }
+        cache.set("saints", saints);
+        return "pages/saint/locate.jsp";
+    }
 
     @JsonOutput
     @Get("/states/{nationId}")
